@@ -248,6 +248,40 @@ time {
   }
 }
 
+/* About section */
+.about {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  margin: 0.5em 0 1.5em 0;
+}
+
+.about-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  filter: grayscale(100%);
+}
+
+.about-text {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: left;
+    width: 100%;
+  }
+}
+
 /* Print styles */
 @media print {
   body {
