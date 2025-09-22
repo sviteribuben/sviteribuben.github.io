@@ -76,6 +76,21 @@ p {
   width: auto;
 }
 
+/* Force header table into a single-column stacked layout */
+.header tr {
+  display: block;
+}
+
+.header th,
+.header td {
+  display: block;
+  width: 100%;
+}
+
+.header tr + tr {
+  margin-top: 0.5em;
+}
+
 .title {
   font-size: 1.5em;
   margin: 0;
