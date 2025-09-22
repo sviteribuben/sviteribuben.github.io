@@ -1,0 +1,111 @@
+/* CSS Reset for Monospace Web */
+
+/* Box sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML and body defaults */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: monospace;
+  line-height: 1.4;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Links */
+a {
+  background-color: transparent;
+  text-decoration: underline;
+  color: inherit;
+}
+
+a:focus,
+a:hover {
+  outline: 0;
+}
+
+/* Lists */
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: 0;
+  text-align: left;
+}
+
+/* Form elements */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+/* Code */
+code,
+pre {
+  font-family: monospace;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default legend styles */
+legend {
+  border: 0;
+  padding: 0;
+}
