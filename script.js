@@ -347,8 +347,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Initialize gradient generator
-    new GradientGenerator();
-
     console.log('Monospace Web Portfolio initialized');
 });

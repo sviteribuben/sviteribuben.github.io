@@ -37,6 +37,7 @@
             <li><a href="#experience">Опыт работы</a></li>
             <li><a href="#skills">Навыки</a></li>
             <li><a href="#projects">Проекты</a></li>
+            <li><a href="news.html">Новости проектов</a></li>
             <li><a href="#education">Развитие</a></li>
             <li><a href="#contacts">Контакты</a></li>
         </ul>
@@ -191,62 +192,6 @@
                 <li>Email: <a href="mailto:sviteribuben@gmail.com">sviteribuben@gmail.com</a></li>
                 <li>Telegram: <a href="https://t.me/@Sviteribuben">@Sviteribuben</a></li>
             </ul>
-        </div>
-    </div>
-
-    <h2 id="gradient-generator">CSS Gradient Generator</h2>
-    <div class="gradient-generator">
-        <div class="generator-controls">
-            <div class="control-group">
-                <label for="gradient-type">Тип градиента:</label>
-                <select id="gradient-type">
-                    <option value="linear">Линейный</option>
-                    <option value="radial">Радиальный</option>
-                </select>
-            </div>
-
-            <div class="control-group" id="direction-group">
-                <label for="direction">Направление:</label>
-                <select id="direction">
-                    <option value="to right">Вправо</option>
-                    <option value="to left">Влево</option>
-                    <option value="to bottom">Вниз</option>
-                    <option value="to top">Вверх</option>
-                    <option value="45deg">45°</option>
-                    <option value="135deg">135°</option>
-                    <option value="225deg">225°</option>
-                    <option value="315deg">315°</option>
-                </select>
-            </div>
-
-            <div class="color-stops">
-                <h4>Цветовые остановки</h4>
-                <div id="color-stops-container">
-                    <div class="color-stop">
-                        <input type="color" class="color-input" value="#ff0000">
-                        <input type="range" class="position-input" min="0" max="100" value="0">
-                        <span class="position-value">0%</span>
-                        <button class="remove-stop" style="display: none;">×</button>
-                    </div>
-                    <div class="color-stop">
-                        <input type="color" class="color-input" value="#0000ff">
-                        <input type="range" class="position-input" min="0" max="100" value="100">
-                        <span class="position-value">100%</span>
-                        <button class="remove-stop" style="display: none;">×</button>
-                    </div>
-                </div>
-                <button id="add-color-stop">Добавить цвет</button>
-            </div>
-
-            <button id="export-css">Экспортировать CSS</button>
-        </div>
-
-        <div class="generator-preview">
-            <div id="gradient-preview"></div>
-            <div class="css-output">
-                <h4>CSS код:</h4>
-                <pre id="css-code">background: linear-gradient(to right, #ff0000 0%, #0000ff 100%);</pre>
-            </div>
         </div>
     </div>
 
