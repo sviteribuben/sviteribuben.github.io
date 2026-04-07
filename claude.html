@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="author" content="Дмитрий Болдырев">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <title>Запускаем Claude Code в РФ</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style-news.css">
+</head>
+<body>
+
+  <h1>Установка и настройка окружения: Node.js 22 LTS, Claude и OmniRoute</h1>
+
+  <p>Эта инструкция поможет быстро развернуть локальное окружение для работы с <strong>Claude</strong> через <strong>OmniRoute</strong> и использовать последнюю LTS-версию Node.js. Рассмотрим шаги по установке, настройке переменных и запуску сервера.</p>
+
+  <h2>1. Установка Node.js 22 LTS</h2>
+  <p>Для начала установите актуальную LTS-версию Node.js. В macOS это можно сделать через Homebrew:</p>
+
+  <pre><code>brew install node@22</code></pre>
+
+  <p>После установки проверьте, что Node.js работает:</p>
+  <pre><code>node -v</code></pre>
+
+  <h2>2. Установка Claude CLI</h2>
+  <p>Следующий шаг — установка Claude через официальный установочный скрипт:</p>
+
+  <pre><code>curl -fsSL https://claude.ai/install.sh | bash</code></pre>
+
+  <div class="note">
+    <strong>Совет:</strong> Перед установкой убедитесь, что у вас установлены права администратора и актуальные curl и bash.
+  </div>
+
+  <h2>3. Установка OmniRoute</h2>
+  <p>После этого установите OmniRoute глобально с помощью npm:</p>
+
+  <pre><code>npm install -g omniroute</code></pre>
+
+  <p>Далее авторизуйтесь и выберите в качестве провайдера <strong>Kiro AI</strong>. Затем добавьте свой API-ключ.</p>
+
+  <h2>4. Настройка переменных окружения</h2>
+  <p>Для корректной работы систем задайте переменные окружения (например, в вашем <code>vim ~/.zshrc или vim ~/.bashrc</code> + <code>source ~/.zshrc или source ~/.bashrc</code>):</p>
+
+  <pre><code>export ANTHROPIC_BASE_URL="http://localhost:20128/v1"
+export ANTHROPIC_AUTH_TOKEN=sk-&lt;your_api_token&gt;
+export ANTHROPIC_API_KEY=
+export ANTHROPIC_MODEL=kr/claude-sonnet-4.5
+export ANTHROPIC_SMALL_FAST_MODEL=kr/claude-sonnet-4.5
+export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1</code></pre>
+
+  <p>Не забудьте заменить <code>&lt;your_api_token&gt;</code> на ваш реальный токен.</p>
+
+  <h2>5. Запуск сервера OmniRoute</h2>
+  <p>Чтобы активировать сервер и начать работу с Claude, выполните команду:</p>
+
+  <pre><code>omniroute</code></pre>
+
+  <p>После этого сервер будет доступен локально, и вы сможете отправлять запросы к API Anthropic через OmniRoute.</p>
+
+  <h2>Заключение</h2>
+  <p>Теперь всё готово к интеграции Claude в ваши проекты. Такой подход обеспечивает гибкость и возможность локальной отладки без лишнего сетевого трафика. Если появятся сложности — проверьте корректность установленных путей и переменных окружения, а также запущен ли у вас сервер OmniRoute.</p>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
